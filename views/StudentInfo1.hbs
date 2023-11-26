@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Profile</title>
+        <link href="/css/student-information.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="main_div">
+            <div id="picture_div">
+                <img src="/images/profilepicture.jpg" width="100%">
+            </div>
+            <div id="bio_div">
+                <div class="profile_info" id="name_div">
+                    <h1> {{ display }}  ({{ account_type }})  </h1>
+                    
+                </div>
+                <div class="profile_info" id="reservation_div">
+                    <h2> Reservations </h2>
+                        <p> You have no current reservations... </p>
+                </div>
+                <div class="profile_info" id="button_div">
+                    <a href="/StudentInfoEdit">
+                        <button id="edit_profile">
+                            Edit Profile
+                        </button>
+                    </a>
+                    <a href="/Index1">
+                        <button>
+                            Go to Main Page
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

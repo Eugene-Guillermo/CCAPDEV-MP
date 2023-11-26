@@ -1,0 +1,259 @@
+<html>
+    <head>
+        <title> Home Page </title>
+        <link rel="stylesheet" href="/css/index.css">
+        <script src="/js/Laboratory.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <body>
+        <div id="main_div">
+            <div id="modal_div">
+                <div id="modal_content">
+                    <div id="logo">
+                        <img src="/images/logo.png" width="200px">
+                    </div>
+                    <div id="search">
+                        <select id="user_dropdown"></select>
+                        <button id="search_profile"> Search </button>
+                    </div>
+                    <a href="#">
+                        <p class="modal_back" id="modal_back"><i> Back </i></p>
+                    </a>  
+                </div>
+            </div>
+            <div id="left_div">
+                <div id="div_1">
+                    <a href="/StudentInfo1">
+                        <button class="div_button">
+                            Profile
+                        </button>
+                    </a>
+                    <a href="/Login">
+                        <button class="div_button">
+                            Log Out
+                        </button>
+                    </a>
+                </div>
+
+                <div id="div_2">
+                    <a href="/Laboratory1">
+                        <button id="lab_1" style="background-color: gray;">
+                            Laboratory 1
+                        </button>
+                    </a>
+                </div>
+
+                <div id="div_3">
+                    <label for="date"> Date: </label>
+                    <select id="date" name="date">
+                        <option value="January"> January </option>
+                        <option value="February"> February </option>
+                        <option value="March"> March </option>
+                        <option value="April"> April </option>
+                        <option value="May"> May </option>
+                        <option value="June"> June </option>
+                        <option value="July"> July </option>
+                        <option value="August"> August </option>
+                        <option value="September"> September </option>
+                        <option value="October"> October </option>
+                        <option value="November"> November </option>
+                        <option value="December"> December </option>
+                    </select>
+                    <label for="day"> Day: </label>
+                    <select id="day" name="day">
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                        <option value="6"> 6 </option>
+                        <option value="7"> 7 </option>
+                        <option value="8"> 8 </option>
+                        <option value="9"> 9 </option>
+                        <option value="10"> 10 </option>
+                        <option value="11"> 11 </option>
+                        <option value="12"> 12 </option>
+                        <option value="13"> 13 </option>
+                        <option value="14"> 14 </option>
+                        <option value="15"> 15 </option>
+                        <option value="16"> 16 </option>
+                        <option value="17"> 17 </option>
+                        <option value="18"> 18 </option>
+                        <option value="19"> 19 </option>
+                        <option value="20"> 20 </option>
+                        <option value="21"> 21 </option>
+                        <option value="22"> 22 </option>
+                        <option value="23"> 23 </option>
+                        <option value="24"> 24 </option>
+                        <option value="25"> 25 </option>
+                        <option value="26"> 26 </option>
+                        <option value="27"> 27 </option>
+                        <option value="28"> 28 </option>
+                        <option value="29"> 29 </option>
+                        <option value="30"> 30 </option>
+                        <option value="31"> 31 </option>
+                    </select>
+                    <label for="time"> Time: </label>
+                    <select id="time" name="time">
+                        <option value="1"> 7:30 AM </option>
+                        <option value="2"> 8:00 AM </option>
+                        <option value="3"> 8:30 AM </option>
+                        <option value="4"> 9:00 AM </option>
+                        <option value="5"> 9:30 AM </option>
+                        <option value="6"> 10:00 AM </option>
+                        <option value="7"> 10:30 AM </option>
+                        <option value="8"> 11:00 AM </option>
+                        <option value="9"> 11:30 AM </option>
+                        <option value="10"> 12:00 PM </option>
+                        <option value="11"> 12:30 PM </option>
+                        <option value="12"> 1:00 PM </option>
+                        <option value="13"> 1:30 PM </option>
+                        <option value="14"> 2:00 PM </option>
+                        <option value="15"> 2:30 PM </option>
+                        <option value="16"> 3:00 PM </option>
+                        <option value="17"> 3:30 PM </option>
+                        <option value="18"> 4:00 PM </option>
+                        <option value="19"> 4:30 PM </option>
+                        <option value="20"> 5:00 PM </option>
+                        <option value="21"> 5:30 PM </option>
+                    </select>
+                    <p> to </p>
+                    <select id="time" name="time">
+                        <option value="1"> 7:30 AM </option>
+                        <option value="2"> 8:00 AM </option>
+                        <option value="3"> 8:30 AM </option>
+                        <option value="4"> 9:00 AM </option>
+                        <option value="5"> 9:30 AM </option>
+                        <option value="6"> 10:00 AM </option>
+                        <option value="7"> 10:30 AM </option>
+                        <option value="8"> 11:00 AM </option>
+                        <option value="9"> 11:30 AM </option>
+                        <option value="10"> 12:00 PM </option>
+                        <option value="11"> 12:30 PM </option>
+                        <option value="12"> 1:00 PM </option>
+                        <option value="13"> 1:30 PM </option>
+                        <option value="14"> 2:00 PM </option>
+                        <option value="15"> 2:30 PM </option>
+                        <option value="16"> 3:00 PM </option>
+                        <option value="17"> 3:30 PM </option>
+                        <option value="18"> 4:00 PM </option>
+                        <option value="19"> 4:30 PM </option>
+                        <option value="20"> 5:00 PM </option>
+                        <option value="21"> 5:30 PM </option>
+                    </select>
+                    <a href="/Index2">
+                        <button>
+                            Search
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button id="search_user">
+                            Search User
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div id="right_div">
+                <div id="top_div">
+                </div>
+                <div id="content_div">
+                    <div id="layout_div">
+                        <div class="layout_row" id="row_1" style="justify-content: center; margin-top: 20px; margin-bottom: 20px;">
+                            <h1 style="color: white; -webkit-text-stroke: 1px black;"> Editing slot(s) </h1>
+                        </div>
+                        <div class="timeslot_layout">
+                            <a href="/StudentInfo3">
+                                <div class="timeslot_div reserved" id="timeslot_1">
+                                    <p> 7:30 - 8:00 AM</p>
+                                </div>
+                            </a>
+                            <a href="/StudentInfo3">
+                                <div class="timeslot_div reserved" id="timeslot_2">
+                                    <p> 8:00 - 8:30 AM</p>
+                                </div>
+                            </a>
+                            <a href="/StudentInfo3">
+                                <div class="timeslot_div reserved" id="timeslot_3">
+                                    <p> 8:30 - 9:00 AM</p>
+                                </div>
+                            </a>
+                            <a href="/StudentInfo3">
+                                <div class="timeslot_div reserved" id="timeslot_4">
+                                    <p> 9:00 - 9:30 AM</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="timeslot_layout">
+                            <div class="timeslot_div reservedByUser" id="timeslot_5" onclick="remove(this)">
+                                <p> 9:30 - 10:00 AM</p>
+                            </div>
+                            <div class="timeslot_div reservedByUser" id="timeslot_6" onclick="remove(this)">
+                                <p> 10:00 - 10:30 AM</p>
+                            </div>
+                            <div class="timeslot_div" id="timeslot_7" onclick="remove(this)">
+                                <p> 10:30 - 11:00 AM</p>
+                            </div>
+                            <div class="timeslot_div" id="timeslot_8" onclick="remove(this)">
+                                <p> 11:00 - 11:30 AM</p>
+                            </div>
+                        </div>
+                        <div class="timeslot_layout">
+                            <div class="timeslot_div" id="timeslot_9" onclick="remove(this)">
+                                <p> 11:30 - 12:00 NN</p>
+                            </div>
+                            <div class="timeslot_div" id="timeslot_10" onclick="remove(this)">
+                                <p> 12:00 - 12:30 PM</p>
+                            </div>
+                            <div class="timeslot_div" id="timeslot_11" onclick="remove(this)">
+                                <p> 12:30 - 1:00 PM</p>
+                            </div>
+                            <div class="timeslot_div" id="timeslot_12" onclick="remove(this)">
+                                <p> 1:00 - 1:30 PM</p>
+                            </div>
+                        </div>
+                        <div class="timeslot_layout">
+                            <div class="timeslot_div" id="timeslot_13" onclick="remove(this)">
+                                <p> 1:30 - 2:00 PM</p>
+                            </div>
+                            <div class="timeslot_div" id="timeslot_14" onclick="remove(this)">
+                                <p> 2:00 - 2:30 PM</p>
+                            </div>
+                            <div class="timeslot_div" id="timeslot_15" onclick="remove(this)">
+                                <p> 2:30 - 3:00 PM</p>
+                            </div>
+                            <div class="timeslot_div" id="timeslot_16" onclick="remove(this)">
+                                <p> 3:00 - 3:30 PM</p>
+                            </div>
+                        </div>
+                        <div class="timeslot_layout">
+                            <div class="timeslot_div" id="timeslot_17" onclick="remove(this)">
+                                <p> 3:30 - 4:00 PM</p>
+                            </div>
+                            <div class="timeslot_div" id="timeslot_18" onclick="remove(this)">
+                                <p> 4:00 - 4:30 PM</p>
+                            </div>
+                            <div class="timeslot_div" id="timeslot_19" onclick="remove(this)">
+                                <p> 4:30 - 5:00 PM</p>
+                            </div>
+                            <div class="timeslot_div" id="timeslot_20" onclick="remove(this)">
+                                <p> 5:00 - 5:30 PM</p>
+                            </div>
+                        </div>
+                        <!-- <p style="line-height: 1rem;"><i> Clicking a reserved slot will redirect you to the profile of the user </i></p>
+                        <p style="line-height: 1rem;"><i> Click your reserved slot(s) to remove your reservation </i></p> -->
+                        <button id="save_button" onclick="remove_alert('{{email}}', '{{account_type}}')" disabled>
+                            Save
+                        </button>
+                        <a href="/TimeSlot1">
+                            <button>
+                                Back
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

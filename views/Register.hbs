@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link href="/css/login-register.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script defer type="module" src="/js/Register.js"></script>
+</head>
+<body>
+<div id = "container">
+  <div id = "logo">
+    <img src = "/images/logo.png" width = "200px">
+  </div>
+  <h1>Register</h1>
+  <form id = "register" onsubmit="register">
+    <p id = "error1"></p>
+    <p id = "error2"></p>
+    <label for = "email">Email Address</label>
+    <input type = "text" id = "email" required>
+    <label for = "display">Display Name</label>
+    <input type = "text" id = "display" required>
+    <label for = "pass">Password</label>
+    <input type = "password" id = "pass" required>
+    <label for = "pass2">Confirm Password</label>
+    <input type = "password" id = "pass2" required>
+    <button type = "submit" id = "reg-button">Register</button>
+  </form>
+  <div id = "back-container">
+    <a href = "/Login"><button id = "back-button" >Back to Login Page</button></a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Profile</title>
+        <link href="/css/student-information.css" rel="stylesheet">
+        <script src="/js/StudentInfo.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <body>
+        <div id="main_div">
+            <div id="picture_div">
+                <img src="/images/profilepicture.jpg" width="100%">
+            </div>
+            <div id="bio_div">
+                <div class="profile_info" id="name_div">
+                    <h1> {{display}} ({{account_type}}) </h1>
+                </div>
+                <div class="profile_info" id="reservation_div">
+                    <h2> Reservations </h2>
+                        <p> You have no current reservations... </p>
+                </div>
+                <div class="profile_info" id="button_div">
+                    <button id="delete_button" onclick="delete_account()">
+                        Delete Account
+                    </button>
+                    <a href="/StudentInfo1">
+                        <button id="back_button">
+                            Back
+                        </button>
+                    </a>
+                    <a href="/StudentInfo1">
+                        <button id="save_button">
+                            Save
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

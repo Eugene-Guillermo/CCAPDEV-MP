@@ -1,0 +1,373 @@
+body {
+    margin: 0;
+    background-color: #B4D3B2;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+*
+{
+    font-family: Verdana;
+}
+
+button {
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    border-style: outset;
+    background-color: #EFFCEF;
+    border-color: black;
+}
+
+/* Modal Div 1 */
+
+#modal_div {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modal_content {
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 93%;
+    border: 1px solid grey;
+    width: 900px; 
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+#search {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 550px;
+}
+
+#search button {
+    height: 40px;
+    width: 80px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#reserve_button {
+    height: 40px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#search input {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#modal_content input {
+    width: 500px;
+    height: 40px;
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+}
+
+/* --- */
+
+
+.timeslot_layout {
+    /* background-color: white; */
+    display: flex;
+    justify-content: space-evenly;
+    height: 80px;
+    width: 80%;
+}
+
+.timeslot_div {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 150px;
+    height: 50px;
+}
+
+.timeslot_div p {
+    font-size: 1em;
+    color: black;
+    text-align: center;
+}
+
+.timeslot_div:hover {
+    background-color: lightgrey;
+    border: 1px solid white;
+}
+
+.reserved {
+    background-color: red;
+    color: white;
+}
+
+.reserved:hover {
+    background-color: darkred;
+}
+
+.reservedByUser {
+    background-color: green;
+}
+.reservedByUser:hover {
+    background-color: darkgreen;
+}
+
+.toggled {
+    background-color: grey;
+}
+
+.toggled:hover {
+    background-color: grey;
+}
+
+.reserved:hover p, .reservedByUser:hover p, .timeslot_div:hover p {
+    color: white;
+}
+
+#edit_link {
+    color: gray;
+}
+
+#edit_link:hover {
+    color: rgb(73, 73, 73);
+}
+
+/* --- */
+
+.modal_back {
+    color: gray;
+    opacity: 90%;
+}
+
+.modal_back:hover {
+    color: white;
+}
+
+#main_div {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#main_div button:hover {
+    background-color: grey;
+    color: white;
+    border: 1px solid white;
+}
+
+#right_div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#top_div {
+    background-color: #597D35;
+    position: sticky;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    border-bottom: 1px solid black;
+}
+
+#top_div button {
+    margin-left: 20px;
+    height: 40px;
+    width: 100px;
+}
+
+#content_div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+    width: 100%;
+    height: 88%;
+    overflow: auto;
+}
+
+#layout_div {
+    background-color: #7EB37A;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 900px;
+    min-height: 740px;
+    border: 1px solid black;
+}
+
+.layout_row {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 5%;
+}
+
+.layout_column {
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 15%;
+}
+
+.seat_div {
+    background-color: white;
+    border-radius: 40px;
+    width: 55px;
+    height: 55px;
+    border: 1px solid black;
+}
+
+.seat_div:hover {
+    background-color: lightgray;
+    border: 1px solid white;
+}
+
+.seat_div:active {
+    background-color: #4895EF;
+}
+
+#content_div .div_button {  
+    line-height: 0rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #EFFCEF;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    height: 100px;
+    border: 1px solid black;
+    margin-bottom: 40px;
+}
+
+#content_div .div_button:hover {  
+    color: white;
+    background-color: grey;
+    border: 1px solid white;
+    margin-bottom: 40px;
+}
+
+.div_button h1, h3 {
+    margin-left: 15px;
+}
+
+#left_div {
+    background-color: black;
+    opacity: 90%;
+    width: 450px;
+    position: sticky;
+    left: 0;
+    height: 100%;
+}
+
+#div_1 {
+    background-color: black;
+    display: flex;
+    width: 100%;
+    height: 75px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#div_1 button{
+    border-radius: 5px;
+    display: flex;
+    background-color: #EFFCEF;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100px;
+}
+
+#div_2 {
+    background-color: #101518;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 301px;
+    padding-top: 20px;
+    overflow: auto;
+    overflow-y: scroll;
+    align-items: center;
+}
+
+#div_2 button{
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: flex;
+    background-color: #EFFCEF;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 250px;
+}
+
+#div_3 {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    height: 457px;
+}
+
+#div_3 p {
+    color: white;
+}
+
+#div_3 button {
+    margin-top: 20px;
+    height: 40px;
+    width: 100px;
+}
+
+label {
+    color: white;
+    margin-bottom: 5px;
+}
+
+select {
+    margin-bottom: 10px;
+    height: 45px;
+    width: 200px;
+}
+
+#time {
+    height: 35px;
+    margin-bottom: 0px;
+    width: 90px;
+}

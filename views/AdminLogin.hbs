@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrator Login</title>
+    <link href="/css/login-register.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer type="module" src="/js/Login.js"></script>
+</head>
+<body>
+  <div id = "container">
+        <h1>Administrator Login</h1>
+      <form id = "login">
+          <label for = "user">Username</label>
+          <input type = "text" id = "user" required>
+          <label for = "pass">Password</label>
+          <input type = "password" id = "pass" required>
+          <label>Remember Me <input type = "checkbox" id = "remember"></label>
+          <button type = "submit" id = "sign-button">Sign in</button>
+      </form>
+      <div id = "back-container">
+          <a href = "/Login"><button id = "back-button" >Back to Login Page</button></a>
+      </div>
+  </div>
+</body>
+</html>
