@@ -13,7 +13,7 @@ const app = express();
 
 dotenv.config();
 port = process.env.PORT || 3000;
-hostname = '127.0.0.1';
+hostname = process.env.IP_ADDRESS || '127.0.0.1';
 
 app.set('view engine', 'hbs');
 
