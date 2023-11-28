@@ -91,9 +91,9 @@ const controller = {
     },
 
     postAdminLogin: async function(req, res) {
+        console.log(req.body);
         const email = req.body.email;
         const password = sha1(req.body.password);
-        const display = req.body.display;
 
         try {
             // Check credentials using the MongoDB model

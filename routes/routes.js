@@ -12,7 +12,7 @@ app.post('/Register', controller.postRegister);
 app.post('/EmailExists', controller.postEmailExists);
 app.post('/DisplayExists', controller.postDisplayExists);
 app.get('/AdminLogin', controller.getAdminLogin);
-app.post('AdminLogin', controller.postAdminLogin);
+app.post('/AdminLogin', controller.postAdminLogin);
 app.get('/StudentInfo1/', controller.getStudentInfo);
 app.get('/StudentInfoEdit', controller.getStudentInfoEdit);
 app.get('/Index1', controller.getIndex1);

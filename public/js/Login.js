@@ -12,7 +12,7 @@ sign_button.addEventListener("click", (e) =>
 
         var url = '/Login';
 
-        if (window.location.href == '/AdminLogin')
+        if (window.location.pathname == '/AdminLogin')
         {
             url = '/AdminLogin';
         }
