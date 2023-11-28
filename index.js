@@ -12,7 +12,7 @@ const connect = require('./models/db.js');
 const app = express();
 
 dotenv.config();
-port = 3000;
+port = process.env.PORT || 3000;
 hostname = '127.0.0.1';
 
 app.set('view engine', 'hbs');
