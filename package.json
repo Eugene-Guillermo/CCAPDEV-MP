@@ -6,9 +6,10 @@
     "express-session": "^1.17.3",
     "hbs": "^4.2.0",
     "mongo": "^0.1.0",
-    "mongodb": "^6.3.0",
+    "mongodb": "6.2",
     "mongoose": "^8.0.1",
     "node": "^21.2.0",
+    "sha1": "^1.1.1",
     "supervisor": "^0.12.0"
   },
   "name": "mc1",
