@@ -1,18 +1,26 @@
 const User = require('../models/User.js');
+const sha1 = require("sha1");
 
 const controller = {
     getLogin: async function(req, res) {
         res.render('Login');
     },
 
-    redirectLogin: function(req, res) {
-        res.redirect('/');
+    redirect: function(req, res) {
+        if (req.session.email)
+        {
+            res.redirect('/Index1');
+        }
+        else
+        {
+            res.redirect('/Login');
+        }
     },
 
     postLogin: async function(req, res) {
         const email = req.body.email;
         console.log(req.session);
-        const password = req.body.password;
+        const password = sha1(req.body.password);
 
         res.status(200);
         try {
@@ -41,7 +49,7 @@ const controller = {
 
     postRegister: async function(req, res) {
         const email = req.body.email;
-        const password = req.body.password;
+        const password = sha1(req.body.password);
         const display = req.body.display;
 
         console.log(req.body);
@@ -83,6 +91,10 @@ const controller = {
     },
 
     postAdminLogin: async function(req, res) {
+        const email = req.body.email;
+        const password = sha1(req.body.password);
+        const display = req.body.display;
+
         try {
             // Check credentials using the MongoDB model
             const user = await User.findOne({email: email, password: password});
@@ -199,7 +211,11 @@ const controller = {
             res.status(400);
             res.send(e);
         }
-        
+    },
+
+    logoutAccount: async function(req, res) {
+        req.session.email = null;
+        res.redirect('/');
     }
 }
 

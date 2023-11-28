@@ -4,8 +4,8 @@ const controller = require('../controllers/controller.js');
 
 const app = express();
 
-app.get('/', controller.getLogin);
-app.get('/Login', controller.redirectLogin);
+app.get('/', controller.redirect);
+app.get('/Login', controller.getLogin);
 app.post('/Login', controller.postLogin);
 app.get('/Register', controller.getRegister);
 app.post('/Register', controller.postRegister);
@@ -24,5 +24,6 @@ app.get('/StudentInfo2/:display', controller.getStudentInfo2);
 app.get('/StudentInfo3', controller.getStudentInfo3);
 app.get('/GetUsers', controller.getUsers);
 app.get('/DeleteAccount', controller.deleteAccount);
+app.get('/LogoutAccount', controller.logoutAccount);
 
 module.exports = app;

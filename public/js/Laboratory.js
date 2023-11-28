@@ -78,3 +78,23 @@ search_user_button.onclick = function() {
 back.onclick = function() {
     modal.style.display = "none";
 }
+
+$('#user_dropdown').ready(function() {
+    $.ajax({
+        url: '/GetUsers',
+        type: 'GET',
+        success: function(response) {
+            // Parse and handle the response data
+            const parsedData = JSON.parse(JSON.stringify(response));
+            console.log('Parsed response data:', parsedData);
+            for (var i = 0; i < parsedData.length; i++)
+            {
+                $('#user_dropdown').append($('<option value ="' + parsedData[i].display + '">' + parsedData[i].display + '</option>'));
+            }
+        },
+        error: function(error) {
+            alert(error);
+            console.error(error);
+        }
+    });
+});
