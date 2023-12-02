@@ -6,6 +6,6 @@ How to run:
 
 2. Open cmd then navigate to folder location
 
-3. Run "npm init" (use defaults), "npm install express --save", "npm install hbs", "npm install dotenv", "npm install supervisor -g", "npm install mongoose"
+3. Run "npm install"
 
 4. Lastly, run "node index.js" to launch server. Please register first if the server is still new.
