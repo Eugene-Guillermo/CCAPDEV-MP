@@ -26,8 +26,9 @@ $(document).ready(function () {
                     }
                 },
                 error: function(error) {
-                    alert(error);
-                    console.error(error);
+                    const parsedData = JSON.parse(JSON.stringify(error));
+                    console.log('Parsed response data:', parsedData);
+                    alert(parsedData.responseText);
                 }
             });
         }
@@ -102,8 +103,9 @@ $(document).ready(function () {
                 }
             },
             error: function(error) {
-                alert(error);
-                console.error(error);
+                const parsedData = JSON.parse(JSON.stringify(error));
+                console.log('Parsed response data:', parsedData);
+                alert(parsedData.responseText);
             }
         });
     });
@@ -138,8 +140,9 @@ reg_button.addEventListener("click", (e) =>
                     window.location.href = '/';
             },
             error: function(error) {
-                alert(error);
-                console.error(error);
+                const parsedData = JSON.parse(JSON.stringify(error));
+                console.log('Parsed response data:', parsedData);
+                alert(parsedData.responseText);
             }
         });
     }

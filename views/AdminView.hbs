@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin View</title>
+        <link href="/css/admin-view.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="main_div">
+            <div id="content_div">
+                <div id="reservation_div">
+                    <h2> All Reservations </h2>
+                    {{#each reservations}}
+                        <p>{{this.reserver}}: {{this.reservationDate}} | {{this.reservationTime}} | Laboratory 1 | Seat {{this.seatNo}}</p>
+                    {{/each}}
+                </div>
+                <div id="button_div">
+                    <a href="/AdminViewEdit">
+                        <button id="edit">
+                            Edit Reservations
+                        </button>
+                    </a>
+                    <a href="/AdminIndex">
+                        <button id="back">
+                            Go to Main Page
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

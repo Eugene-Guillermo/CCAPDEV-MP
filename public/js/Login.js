@@ -30,14 +30,18 @@ sign_button.addEventListener("click", (e) =>
 
                 alert(parsedData);
 
-                if(parsedData.startsWith("Welcome"))
+                if(parsedData.startsWith("Welcome, Admin"))
                 {
+                    window.location.href = '/AdminIndex';
+                }
+                else{
                     window.location.href = '/StudentInfo1';
                 }
             },
             error: function(error) {
-                alert(error);
-                console.error(error);
+                const parsedData = JSON.parse(JSON.stringify(error));
+                console.log('Parsed response data:', parsedData);
+                alert(parsedData.responseText);
             }
         });
     }

@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title> Home Page </title>
+        <link rel="stylesheet" href="/css/index.css">
+        <script type="module" src="/js/Main.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <body>
+        <div id="main_div">
+            <div id="modal_div">
+                <div id="modal_content">
+                    <div id="logo">
+                        <img src="/images/logo.png" width="200px">
+                    </div>
+                    <div id="search">
+                        <select id="user_dropdown"></select>
+                        <button id="search_profile"> Search </button>
+                    </div>
+                    <a href="#">
+                        <p class="modal_back" id="modal_back"><i> Back </i></p>
+                    </a>  
+                </div>
+            </div>
+            <div id="left_div">
+                <div id="div_1">
+                    <a href="/StudentInfo1">
+                        <button class="div_button" disabled>
+                            Profile
+                        </button>
+                    </a>
+                    <a href="/logoutAccount">
+                        <button class="div_button">
+                            Log Out
+                        </button>
+                    </a>
+                </div>
+
+                <div id="div_3">
+                    <a href="#">
+                        <button id="search_user">
+                            Search User
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div id="right_div">
+                <div id="top_div">
+                    <a href="/AdminView">
+                        <button id="view_all">
+                            View All Reservations
+                        </button>
+                    </a>
+                </div>
+                <div id="content_div">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -251,14 +251,14 @@ button {
     border: 1px solid black;
 }
 
-.seat_div:hover {
+/* .seat_div:hover {
     background-color: lightgray;
     border: 1px solid white;
-}
+} */
 
-.seat_div:active {
+/* .seat_div:active {
     background-color: #4895EF;
-}
+} */
 
 #content_div .div_button {  
     line-height: 0rem;
@@ -360,7 +360,7 @@ label {
     margin-bottom: 5px;
 }
 
-select {
+#div_3 select {
     margin-bottom: 10px;
     height: 45px;
     width: 200px;
@@ -370,4 +370,9 @@ select {
     height: 35px;
     margin-bottom: 0px;
     width: 90px;
+}
+
+#user_dropdown {
+    width: 60%;
+    height: 70%;
 }

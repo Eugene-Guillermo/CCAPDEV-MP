@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin View</title>
+        <link href="/css/admin-view.css" rel="stylesheet">
+        <script type="module" src="/js/Admin.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <body>
+        <div id="main_div">
+            <div id="content_div">
+                <div id="reservation_div">
+                    {{#each reservations}}
+                        <span id="reserver_{{@index}}">{{this.reserver}}</span>
+
+                        <select id="reservationDate_{{@index}}">
+                            <option value="{{this.reservationDate}}" selected>{{this.reservationDate}}</option>
+                        </select>
+
+                        <select id="reservationTime_{{@index}}">
+                            <option value="{{this.reservationTime}}" selected>{{this.reservationTime}}</option>
+                        </select>
+
+                        <select id="labId_{{@index}}">
+                            <option value="1" selected>Laboratory 1</option>
+                        </select>
+
+                        <select id="seatNo_{{@index}}">
+                            <option value="{{this.seatNo}}" selected>Seat {{this.seatNo}}</option>
+                        </select>
+                        <button id="save_{{@index}}">Save</button>
+                        <button id="delete_{{@index}}">Delete</button>
+                        <br>
+                    {{/each}}
+                </div>
+                <div id="button_div">
+                    <a href="/AdminView">
+                        <button id="back_button">
+                            Back
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

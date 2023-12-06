@@ -13,6 +13,23 @@ back.onclick = function() {
     modal.style.display = "none";
 }
 
+$('#modal2').ready(function() {
+    $('#modal2').css('display', 'flex');
+});
+
+$('#yes').click(function() {
+    $('#modal2').css('display', 'none');
+    $.ajax({
+        url: '/ExtendSession',
+        type: 'GET'
+    });
+});
+
+$('#no').click(function() {
+    $('#modal2').css('display', 'none');
+    
+});
+
 $('#user_dropdown').ready(function() {
     $.ajax({
         url: '/GetUsers',
@@ -27,8 +44,9 @@ $('#user_dropdown').ready(function() {
             }
         },
         error: function(error) {
-            alert(error);
-            console.error(error);
+            const parsedData = JSON.parse(JSON.stringify(error));
+            console.log('Parsed response data:', parsedData);
+            alert(parsedData.responseText);
         }
     });
 });

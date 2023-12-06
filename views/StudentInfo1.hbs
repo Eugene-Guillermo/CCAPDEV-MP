@@ -17,7 +17,9 @@
                 </div>
                 <div class="profile_info" id="reservation_div">
                     <h2> Reservations </h2>
-                        <p> You have no current reservations... </p>
+                    {{#each reservations}}
+                        <p>{{this.reservationDate}} | {{this.reservationTime}} | Laboratory 1 | Seat {{this.seatNo}}</p>
+                    {{/each}}
                 </div>
                 <div class="profile_info" id="button_div">
                     <a href="/StudentInfoEdit">

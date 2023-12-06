@@ -3,7 +3,7 @@
     <head>
         <title>Student Profile</title>
         <link href="/css/student-information.css" rel="stylesheet">
-        <script src="/js/StudentInfo.js" defer></script>
+        <script type="module" src="/js/StudentInfo.js" defer></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     </head>
 
@@ -18,7 +18,26 @@
                 </div>
                 <div class="profile_info" id="reservation_div">
                     <h2> Reservations </h2>
-                        <p> You have no current reservations... </p>
+                    {{#each reservations}}
+                        <select id="reservationDate_{{@index}}">
+                            <option value="{{this.reservationDate}}" selected>{{this.reservationDate}}</option>
+                        </select>
+
+                        <select id="reservationTime_{{@index}}">
+                            <option value="{{this.reservationTime}}" selected>{{this.reservationTime}}</option>
+                        </select>
+
+                        <select id="labId_{{@index}}">
+                            <option value="1" selected>Laboratory 1</option>
+                        </select>
+
+                        <select id="seatNo_{{@index}}">
+                            <option value="{{this.seatNo}}" selected>Seat {{this.seatNo}}</option>
+                        </select>
+                        <button id="save_{{@index}}">Save</button>
+                        <button id="delete_{{@index}}">Delete</button>
+                        <br>
+                    {{/each}}
                 </div>
                 <div class="profile_info" id="button_div">
                     <button id="delete_button" onclick="delete_account()">
@@ -27,11 +46,6 @@
                     <a href="/StudentInfo1">
                         <button id="back_button">
                             Back
-                        </button>
-                    </a>
-                    <a href="/StudentInfo1">
-                        <button id="save_button">
-                            Save
                         </button>
                     </a>
                 </div>
