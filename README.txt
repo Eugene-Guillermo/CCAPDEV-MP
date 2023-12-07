@@ -1,6 +1,4 @@
-NOTE: ADMINLOGIN AND SEARCH FEATURE ARE NOT FUNCTIONAL
-      SEARCH USER IS PARTLY FUNCTIONAL  
-      
+     
 DEPENDENCIES USED:
     npm init -y
     npm install express
