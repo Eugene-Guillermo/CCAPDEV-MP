@@ -19,6 +19,8 @@ app.get('/StudentInfoEdit', controller.getStudentInfoEdit);
 app.get('/GuestView', controller.getGuestView);
 app.get('/GuestView/:date/:time', controller.getGuestView2);
 app.get('/AdminIndex', controller.getAdminIndex);
+app.get('/AdminIndex/:seat/:date/:time', controller.getAdminIndex);
+app.post('/AdminIndex', controller.postAdminIndex);
 app.get('/AdminView', controller.getAdminView);
 app.get('/AdminViewEdit', controller.getAdminViewEdit);
 app.post('/AdminEdit', controller.postAdminEdit);

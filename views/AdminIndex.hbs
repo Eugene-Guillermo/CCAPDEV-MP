@@ -3,6 +3,7 @@
         <title> Home Page </title>
         <link rel="stylesheet" href="/css/index.css">
         <script type="module" src="/js/Main.js" defer></script>
+        <script src="/js/AdminReserve.js" defer></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     </head>
 
@@ -53,7 +54,137 @@
                         </button>
                     </a>
                 </div>
+                
                 <div id="content_div">
+                    <h2 id="available"></h2>
+                    <div id="layout_div">
+                        <div class="layout_row" id="row_1">
+                            <div class="layout_column" id="column_1">
+                                <div class="seat_div" id="seat_1"> </div>
+                                <div class="seat_div" id="seat_2"> </div>
+                                <div class="seat_div" id="seat_3"> </div>
+                            </div>
+                            <div class="layout_column" id="column_2">
+                                <div class="seat_div" id="seat_4"> </div>
+                                <div class="seat_div" id="seat_5"> </div>
+                                <div class="seat_div" id="seat_6"> </div>
+                            </div>
+                        </div>
+                        <div class="layout_row" id="row_2">
+                            <div class="layout_column" id="column_1">
+                                <div class="seat_div" id="seat_7"> </div>
+                                <div class="seat_div" id="seat_8"> </div>
+                                <div class="seat_div" id="seat_9"> </div>
+                            </div>
+                            <div class="layout_column" id="column_2">
+                                <div class="seat_div" id="seat_10"> </div>
+                                <div class="seat_div" id="seat_11"> </div>
+                                <div class="seat_div" id="seat_12"> </div>
+                            </div>
+                        </div>
+                        <div class="layout_row" id="row_3">
+                            <div class="layout_column" id="column_1">
+                                <div class="seat_div" id="seat_13"> </div>
+                                <div class="seat_div" id="seat_14"> </div>
+                                <div class="seat_div" id="seat_15"> </div>
+                            </div>
+                            <div class="layout_column" id="column_2">
+                                <div class="seat_div" id="seat_16"> </div>
+                                <div class="seat_div" id="seat_17"> </div>
+                                <div class="seat_div" id="seat_18"> </div>
+                            </div>
+                        </div>
+                        <div class="layout_row" id="row_4">
+                            <div class="layout_column" id="column_1">
+                                <div class="seat_div" id="seat_19"> </div>
+                                <div class="seat_div" id="seat_20"> </div>
+                                <div class="seat_div" id="seat_21"> </div>
+                            </div>
+                            <div class="layout_column" id="column_2">
+                                <div class="seat_div" id="seat_22"> </div>
+                                <div class="seat_div" id="seat_23"> </div>
+                                <div class="seat_div" id="seat_24"> </div>
+                            </div>
+                        </div>
+                        <div class="layout_row" id="row_5">
+                            <div class="layout_column" id="column_1">
+                                <div class="seat_div" id="seat_25"> </div>
+                                <div class="seat_div" id="seat_26"> </div>
+                                <div class="seat_div" id="seat_27"> </div>
+                            </div>
+                            <div class="layout_column" id="column_2">
+                                <div class="seat_div" id="seat_28"> </div>
+                                <div class="seat_div" id="seat_29"> </div>
+                                <div class="seat_div" id="seat_30"> </div>
+                            </div>
+                        </div>
+
+                        <div class="layout_row" id="row_6" style="justify-content: center;">
+                            <form id="reservationForm" name="reservationForm">
+                                <label for="student"> Student: </label>
+                                <select id="student" name="student" style="margin-right: 20px; margin-left: 5px"></select>
+                                <label for="seatNo"> Seat No: </label>
+                                <select id="seatNo" name="seatNo" style="margin-right: 20px; margin-left: 5px">
+                                    <option value="1"> 1 </option>
+                                    <option value="2"> 2 </option>
+                                    <option value="3"> 3 </option>
+                                    <option value="4"> 4 </option>
+                                    <option value="5"> 5 </option>
+                                    <option value="6"> 6 </option>
+                                    <option value="7"> 7 </option>
+                                    <option value="8"> 8 </option>
+                                    <option value="9"> 9 </option>
+                                    <option value="10"> 10 </option>
+                                    <option value="11"> 11 </option>
+                                    <option value="12"> 12 </option>
+                                    <option value="13"> 13 </option>
+                                    <option value="14"> 14</option>
+                                    <option value="15"> 15 </option>
+                                    <option value="16"> 16 </option>
+                                    <option value="17"> 17 </option>
+                                    <option value="18"> 18 </option>
+                                    <option value="19"> 19 </option>
+                                    <option value="20"> 20 </option>
+                                    <option value="21"> 21 </option>
+                                    <option value="22"> 22 </option>
+                                    <option value="23"> 23 </option>
+                                    <option value="24"> 24 </option>
+                                    <option value="25"> 25 </option>
+                                    <option value="26"> 26 </option>
+                                    <option value="27"> 27 </option>
+                                    <option value="28"> 28 </option>
+                                    <option value="29"> 29 </option>
+                                    <option value="30"> 30 </option>
+                                </select>
+                                <label for="reservationDate"> Date: </label>
+                                <select id="reservationDate" name="reservationDate" style="margin-left: 5px; margin-right: 20px;"></select>
+                                <label for="reservationTime" style="margin-right: 5px;"> Time: </label>
+                                <select id="reservationTime" name="reservationTime">
+                                    <option value="8:00 AM - 8:30 AM"> 8:00 AM - 8:30 AM </option>
+                                    <option value="8:30 AM - 9:00 AM"> 8:30 AM - 9:00 AM </option>
+                                    <option value="9:00 AM - 9:30 AM"> 9:00 AM - 9:30 AM </option>
+                                    <option value="9:30 AM - 10:00 AM"> 9:30 AM - 10:00 AM </option>
+                                    <option value="10:00 AM - 10:30 AM"> 10:00 AM - 10:30 AM </option>
+                                    <option value="10:30 AM - 11:00 AM"> 10:30 AM - 11:00 AM </option>
+                                    <option value="11:00 AM - 11:30 AM"> 11:00 AM - 11:30 AM </option>
+                                    <option value="11:30 AM - 12:00 PM"> 11:30 AM - 12:00 PM </option>
+                                    <option value="12:00 PM - 12:30 PM"> 12:00 PM - 12:30 PM </option>
+                                    <option value="12:30 PM - 1:00 PM"> 12:30 PM - 1:00 PM </option>
+                                    <option value="1:00 PM - 1:30 PM"> 1:00 PM - 1:30 PM </option>
+                                    <option value="1:30 PM - 2:00 PM"> 1:30 PM - 2:00 PM </option>
+                                    <option value="2:00 PM - 2:30 PM"> 2:00 PM - 2:30 PM </option>
+                                    <option value="2:30 PM - 3:00 PM"> 2:30 PM - 3:00 PM </option>
+                                    <option value="3:00 PM - 3:30 PM"> 3:00 PM - 3:30 PM </option>
+                                    <option value="3:30 PM - 4:00 PM"> 3:30 PM - 4:00 PM </option>
+                                </select>
+                                <br>
+                                <div style="justify-content: center; display: flex; margin-top: 5px">
+                                <button id="view_button" style="height: 30px; margin-right: 5px"> View </button>
+                                <button id="save_button" style="height: 30px"> Reserve </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

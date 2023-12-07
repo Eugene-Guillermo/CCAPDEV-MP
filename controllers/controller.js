@@ -214,6 +214,48 @@ const controller = {
         res.render('AdminIndex', {display: user.display, account_type: user.account_type});
     },
 
+    postAdminIndex: async function(req, res) {
+        const reserver = req.body.reserver;
+        const seatNo = req.body.seatNo;
+        const reservationDate = req.body.reservationDate;
+        const reservationTime = req.body.reservationTime;
+        
+        const reservations = await Reservation.find({reservationDate: reservationDate, reservationTime: reservationTime});
+
+        if (reservations.length == 0)
+        {
+            for (var i = 1; i <= 30; i++)
+            {
+                Reservation.create({seatNo: i, reservationDate: reservationDate, reservationTime: reservationTime});
+            }
+        }
+
+
+        console.log(req.body.date);
+        res.status(200);
+        try
+        {
+            const reservation = await Reservation.findOne({seatNo: seatNo, reservationDate: reservationDate, reservationTime: reservationTime});
+            if (reservation.reserver)
+            {
+                res.status(400);
+                res.send("This seat has already been reserved in this specific date and time.");
+            }
+            else
+            {
+                reservation.reserver = reserver;
+                reservation.save();
+                res.send("You have successfully reserved for " + reserver +  " the Seat Number " + seatNo + " at " + reservationDate + " " + reservationTime + "!");
+            }
+        }
+        catch (e)
+        {
+            console.error(e);
+            res.status(400);
+            res.send(e);
+        }
+    },
+
     getAdminView: async function(req, res) {
         const reservations = await Reservation.find({reserver: {$ne:null}});
         var formatted = JSON.parse(JSON.stringify(reservations));
@@ -526,6 +568,14 @@ const controller = {
         console.log(id);
         res.status(200);
         try{
+            const reservations = await Reservation.find({reserver: user.display});
+
+            for(var i = 0; i < reservations.length; i++)
+            {
+                reservations[i].reserver = undefined;
+                reservations[i].save();
+            }
+
             await User.findOneAndDelete({_id: id});
             res.send("Success")
         } catch (e){
@@ -540,7 +590,7 @@ const controller = {
     },
 
     getExtendSession: function (req, res) {
-        req.session.cookie.maxAge += 1000 * 60 * 60 * 24 * 7 * 3;
+        req.session.cookie.maxAge = 1000 * 60 * 60 * 24 * 7 * 3;
    }
 }
 

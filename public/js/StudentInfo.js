@@ -1,4 +1,4 @@
-function delete_account() {
+$('#delete_button').click(function() {
     let text = "Are you sure you want to delete your account?"
     if(confirm(text) == true) {
         $.ajax({
@@ -22,7 +22,7 @@ function delete_account() {
             }
         });
     }
-}
+})
 
 var origReservationDate = [];
 var origReservationTime = [];
